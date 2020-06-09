@@ -60,7 +60,7 @@ const Register = () => {
 
                 setUfs(ufInitials)
             })
-    }, [selectedUF]);
+    }, []);
 
     useEffect(() => {
         if (selectedUF === '0') {
