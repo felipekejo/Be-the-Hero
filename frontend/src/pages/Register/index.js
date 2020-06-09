@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
 
-import { Map, TileLayer, Marker} from 'react-leaflet'
-import { LeafletMouseEvent } from 'leaflet'
+// import { Map, TileLayer, Marker} from 'react-leaflet'
+// import { LeafletMouseEvent } from 'leaflet'
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import './style.css';
@@ -16,7 +16,7 @@ const Register = () => {
     const [selectedUF, setSelectedUF] = useState('0')
     const [selectedCity, setSelectedCity] = useState('0')
 
-    const [selectedPosition, setSelectedPosition] = useState([0, 0])
+    // const [selectedPosition, setSelectedPosition] = useState([0, 0])
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -60,7 +60,7 @@ const Register = () => {
 
                 setUfs(ufInitials)
             })
-    }, []);
+    }, [selectedUF]);
 
     useEffect(() => {
         if (selectedUF === '0') {
